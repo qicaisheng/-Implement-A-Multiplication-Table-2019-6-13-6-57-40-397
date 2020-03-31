@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class MultiplicationTable {
-    public static boolean isValidInput(int firstNumber, int secondNumber) {
+    static boolean isValidInput(int firstNumber, int secondNumber) {
         if (outRangOfOneToThousand(firstNumber)) {
             return false;
         }
@@ -15,19 +15,19 @@ public class MultiplicationTable {
         return firstNumber <= secondNumber;
     }
 
-    private static boolean outRangOfOneToThousand(int value) {
+    static boolean outRangOfOneToThousand(int value) {
         return value > 1000 || value < 1;
     }
 
-    public static List<Integer> sequencesBetween(int firstNumber, int secondNumber) {
+    static List<Integer> sequencesBetween(int firstNumber, int secondNumber) {
         return IntStream.rangeClosed(firstNumber, secondNumber).boxed().collect(Collectors.toList());
     }
 
-    public static String generateMultipleConditions(int firstNumber, int secondNumber) {
+    static String generateMultipleConditions(int firstNumber, int secondNumber) {
         return String.valueOf(firstNumber) + '*' + secondNumber + "=" + firstNumber * secondNumber;
     }
 
-    public static String generateMultiplicationRow(int firstNumber, int secondNumber) {
+    static String generateMultiplicationRow(int firstNumber, int secondNumber) {
         return sequencesBetween(firstNumber, secondNumber).stream()
                 .map(number -> generateMultipleConditions(number, secondNumber))
                 .collect(Collectors.joining("  "));
