@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class MultiplicationTable {
-    public static boolean check(int firstNumber, int secondNumber) {
+    public static boolean isValidInput(int firstNumber, int secondNumber) {
         if (outRangOfOneToThousand(firstNumber)) {
             return false;
         }
@@ -34,7 +34,7 @@ public class MultiplicationTable {
     }
 
     public static String generateMultiplicationTable(int firstNumber, int secondNumber) {
-        if (!check(firstNumber, secondNumber)) {
+        if (!isValidInput(firstNumber, secondNumber)) {
             return null;
         }
         return sequencesBetween(firstNumber, secondNumber).stream()
