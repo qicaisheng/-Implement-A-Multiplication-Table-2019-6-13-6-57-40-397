@@ -29,7 +29,13 @@ public class MultiplicationTable {
 
     public static String generateMultipleRow(int firstNumber, int secondNumber) {
         return sequencesBetween(firstNumber, secondNumber).stream()
-                .map(number -> generateMultipleRow(number, secondNumber))
-                .collect(Collectors.joining(" "));
+                .map(number -> generateMultipleConditions(number, secondNumber))
+                .collect(Collectors.joining("  "));
+    }
+
+    public static String generateMultipleTable(int firstNumber, int secondNumber) {
+        return sequencesBetween(firstNumber, secondNumber).stream()
+                .map(number -> generateMultipleRow(firstNumber, number))
+                .collect(Collectors.joining("\n"));
     }
 }
