@@ -34,4 +34,11 @@ public class MultiplicationTableTest {
         assertEquals("2*3=6", MultiplicationTable.generateMultipleConditions(2, 3));
         assertEquals("3*4=12", MultiplicationTable.generateMultipleConditions(3, 4));
     }
+
+    @Test
+    void should_return_multiplication_row() {
+        assertEquals("2*2=4", MultiplicationTable.generateMultipleRow(2, 2));
+        assertEquals("2*3=6  3*3=9", MultiplicationTable.generateMultipleRow(2, 3));
+        assertEquals("2*4=8  3*4=12  4*4=16", MultiplicationTable.generateMultipleRow(2, 4));
+    }
 }

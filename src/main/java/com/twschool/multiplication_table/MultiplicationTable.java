@@ -26,4 +26,10 @@ public class MultiplicationTable {
     public static String generateMultipleConditions(int firstNumber, int secondNumber) {
         return String.valueOf(firstNumber) + '*' + secondNumber + "=" + firstNumber * secondNumber;
     }
+
+    public static String generateMultipleRow(int firstNumber, int secondNumber) {
+        return sequencesBetween(firstNumber, secondNumber).stream()
+                .map(number -> generateMultipleRow(number, secondNumber))
+                .collect(Collectors.joining(" "));
+    }
 }
