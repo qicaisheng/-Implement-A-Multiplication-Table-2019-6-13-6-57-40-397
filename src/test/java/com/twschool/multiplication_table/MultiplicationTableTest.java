@@ -46,4 +46,11 @@ public class MultiplicationTableTest {
     void should_return_multiplication_table() {
         assertEquals("2*2=4\n2*3=6  3*3=9\n2*4=8  3*4=12  4*4=16", MultiplicationTable.generateMultiplicationTable(2, 4));
     }
+
+    @Test
+    void should_return_null_when_get_multiplication_table_given_incorrect_input() {
+        assertNull(MultiplicationTable.generateMultiplicationTable(4, 2));
+        assertNull(MultiplicationTable.generateMultiplicationTable(0, 2));
+        assertNull(MultiplicationTable.generateMultiplicationTable(2, 1001));
+    }
 }

@@ -34,6 +34,9 @@ public class MultiplicationTable {
     }
 
     public static String generateMultiplicationTable(int firstNumber, int secondNumber) {
+        if (!check(firstNumber, secondNumber)) {
+            return null;
+        }
         return sequencesBetween(firstNumber, secondNumber).stream()
                 .map(number -> generateMultiplicationRow(firstNumber, number))
                 .collect(Collectors.joining("\n"));
