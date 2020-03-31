@@ -37,13 +37,13 @@ public class MultiplicationTableTest {
 
     @Test
     void should_return_multiplication_row() {
-        assertEquals("2*2=4", MultiplicationTable.generateMultipleRow(2, 2));
-        assertEquals("2*3=6  3*3=9", MultiplicationTable.generateMultipleRow(2, 3));
-        assertEquals("2*4=8  3*4=12  4*4=16", MultiplicationTable.generateMultipleRow(2, 4));
+        assertEquals("2*2=4", MultiplicationTable.generateMultiplicationRow(2, 2));
+        assertEquals("2*3=6  3*3=9", MultiplicationTable.generateMultiplicationRow(2, 3));
+        assertEquals("2*4=8  3*4=12  4*4=16", MultiplicationTable.generateMultiplicationRow(2, 4));
     }
 
     @Test
     void should_return_multiplication_table() {
-        assertEquals("2*2=4\n2*3=6  3*3=9\n2*4=8  3*4=12  4*4=16", MultiplicationTable.generateMultipleTable(2, 4));
+        assertEquals("2*2=4\n2*3=6  3*3=9\n2*4=8  3*4=12  4*4=16", MultiplicationTable.generateMultiplicationTable(2, 4));
     }
 }

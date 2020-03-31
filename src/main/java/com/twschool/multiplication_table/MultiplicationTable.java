@@ -27,15 +27,15 @@ public class MultiplicationTable {
         return String.valueOf(firstNumber) + '*' + secondNumber + "=" + firstNumber * secondNumber;
     }
 
-    public static String generateMultipleRow(int firstNumber, int secondNumber) {
+    public static String generateMultiplicationRow(int firstNumber, int secondNumber) {
         return sequencesBetween(firstNumber, secondNumber).stream()
                 .map(number -> generateMultipleConditions(number, secondNumber))
                 .collect(Collectors.joining("  "));
     }
 
-    public static String generateMultipleTable(int firstNumber, int secondNumber) {
+    public static String generateMultiplicationTable(int firstNumber, int secondNumber) {
         return sequencesBetween(firstNumber, secondNumber).stream()
-                .map(number -> generateMultipleRow(firstNumber, number))
+                .map(number -> generateMultiplicationRow(firstNumber, number))
                 .collect(Collectors.joining("\n"));
     }
 }
