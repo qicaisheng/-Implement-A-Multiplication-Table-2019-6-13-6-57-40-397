@@ -22,4 +22,8 @@ public class MultiplicationTable {
     public static List<Integer> sequencesBetween(int firstNumber, int secondNumber) {
         return IntStream.rangeClosed(firstNumber, secondNumber).boxed().collect(Collectors.toList());
     }
+
+    public static String generateMultipleConditions(int firstNumber, int secondNumber) {
+        return String.valueOf(firstNumber) + '*' + secondNumber + "=" + firstNumber * secondNumber;
+    }
 }

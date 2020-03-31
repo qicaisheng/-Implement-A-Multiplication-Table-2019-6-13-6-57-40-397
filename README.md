@@ -33,6 +33,8 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 
 * given two numbers, when generate sequence between two numbers, then return sequences  
 
+* given two numbers, when get multiple math conditions, then return string which is two numbers multiple math conditions 
+
 * given two numbers, when get multiplication row, then return string which is some multiple math conditions from first number multiple second number to second number multiple second number
 
 * given two numbers, when get multiplication table, then return string including multiple multiplication rows

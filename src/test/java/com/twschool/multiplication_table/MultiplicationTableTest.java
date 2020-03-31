@@ -28,4 +28,10 @@ public class MultiplicationTableTest {
         assertEquals(Integer.valueOf(2), actual.get(1));
         assertEquals(Integer.valueOf(3), actual.get(2));
     }
+
+    @Test
+    void should_return_multiple_conditions() {
+        assertEquals("2*3=6", MultiplicationTable.generateMultipleConditions(2, 3));
+        assertEquals("3*4=12", MultiplicationTable.generateMultipleConditions(3, 4));
+    }
 }
