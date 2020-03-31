@@ -26,17 +26,22 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 
 ## Tasking
 
+check input
 * given two numbers, the first number is smaller than second number, when check two number, then return true 
 * given two numbers, the first number is equals with second number, when check two number, then return true
 * given two numbers, one number is greater than 1000, when check two number, then return false
 * given two numbers, one number is smaller than 1, when check two number, then return false
 
+generate sequence between two numbers
 * given two numbers, when generate sequence between two numbers, then return sequences  
 
+generate multiple conditions
 * given two numbers, when get multiple math conditions, then return string which is two numbers multiple math conditions 
 
+generate multiplication row
 * given two numbers, when get multiplication row, then return string which is some multiple math conditions from first number multiple second number to second number multiple second number
 
+generate multiplication table
 * given two numbers, when get multiplication table, then return string including multiple multiplication rows
 
  
